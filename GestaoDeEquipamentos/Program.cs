@@ -32,7 +32,6 @@ namespace GestaoDeEquipamentos {
             int escolha2 = int.Parse(Console.ReadLine());
             return escolha2;
         }
-
         static void RegistrarEquip() {
             Console.Clear();
             Console.WriteLine("Informe o nome do equipamento: ");
@@ -77,7 +76,6 @@ namespace GestaoDeEquipamentos {
             Console.WriteLine("Informe o fabricante: ");
             fabricante[indice] = Console.ReadLine();
         }
-        
         static void ExcluirEquip() {
             Console.Clear();
             Console.WriteLine("Digite o número do indice do item a ser Excluído: ");
@@ -88,7 +86,6 @@ namespace GestaoDeEquipamentos {
             dataFabricacao.RemoveAt(indice); ;
             fabricante.RemoveAt(indice);
         }
-        
         static void RegistrarChamado() {
             Console.WriteLine($"Indíce".PadRight(10) + $"|{nomeEquipamento[0]}".PadRight(30) + $"|{precoAquisicao[0]}".PadRight(20) + $"|{numeroSerie[0]}".PadRight(20) + $"|{dataFabricacao[0]}".PadRight(20) + $"|{fabricante[0]}".PadRight(20));
             Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
@@ -109,7 +106,6 @@ namespace GestaoDeEquipamentos {
             DateTime data = Convert.ToDateTime(Console.ReadLine());
             aberturaChamado.Add(data);
         }
-
         static void EscreverChamado() {
             DateTime dataAtual = DateTime.Today;
             Console.WriteLine($"Indíce".PadRight(8) + $"|{chamado[0]}".PadRight(20) + $"|{indiceEquip[0]}".PadRight(15) + $"|{aberturaChamado[0]}".PadRight(15) + $"|Dias Abertos");
@@ -121,7 +117,6 @@ namespace GestaoDeEquipamentos {
             }
             Console.ReadLine();
         }
-
         static void EditarChamado() {
             Console.WriteLine("Informe o indíce do chamado a ser Editado:");
             int indice = int.Parse(Console.ReadLine());
