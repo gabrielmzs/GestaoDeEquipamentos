@@ -61,23 +61,22 @@ namespace GestaoDeEquipamentos {
             Console.ReadLine();
         }
         static void EditarEquip() {
-            Console.Clear();
-            Console.WriteLine("Digite o número do indice do item a ser editado: ");
+            ImprimirEquip();
+            Console.Write("Digite o número do indice do item a ser editado: ");
             int indice = int.Parse(Console.ReadLine());
-            Console.Clear();
-            Console.WriteLine("Informe o nome do equipamento: ");
+            Console.Write("Informe o nome do equipamento: ");
             nomeEquipamento[indice] = Console.ReadLine();
-            Console.WriteLine("Informe o preço de aquisição: ");
+            Console.Write("Informe o preço de aquisição: ");
             precoAquisicao[indice] = Console.ReadLine();
-            Console.WriteLine("Informe o número de série: ");
+            Console.Write("Informe o número de série: ");
             numeroSerie[indice] = Console.ReadLine();
-            Console.WriteLine("Informe a data de fabricação (dd/mm/aaaa): ");
+            Console.Write("Informe a data de fabricação (dd/mm/aaaa): ");
             dataFabricacao[indice] = Console.ReadLine();
-            Console.WriteLine("Informe o fabricante: ");
+            Console.Write("Informe o fabricante: ");
             fabricante[indice] = Console.ReadLine();
         }
         static void ExcluirEquip() {
-            Console.Clear();
+            ImprimirEquip();
             Console.WriteLine("Digite o número do indice do item a ser Excluído: ");
             int indice = int.Parse(Console.ReadLine());
             nomeEquipamento.RemoveAt(indice);
@@ -118,6 +117,7 @@ namespace GestaoDeEquipamentos {
             Console.ReadLine();
         }
         static void EditarChamado() {
+            EscreverChamado();
             Console.WriteLine("Informe o indíce do chamado a ser Editado:");
             int indice = int.Parse(Console.ReadLine());
 
@@ -133,6 +133,7 @@ namespace GestaoDeEquipamentos {
             aberturaChamado[indice] = data;
         }
         static void ExcluirChamado() {
+            EscreverChamado();
             Console.WriteLine("Informe o indíce do chamado a ser Excluído:");
             int indice = int.Parse(Console.ReadLine());
 
@@ -152,18 +153,18 @@ namespace GestaoDeEquipamentos {
 
                     if (escolha2 == 1) RegistrarEquip();
                     if (escolha2 == 2) ImprimirEquip();
-                    if(escolha2 == 3) EditarEquip();
+                    if (escolha2 == 3) EditarEquip();
                     if (escolha2 == 4) ExcluirEquip();
-                    if(escolha2 == 0) escolha = MenuInicial();
+                    if (escolha2 == 0) escolha = MenuInicial();
                 }
             
                 if(escolha == 2) {
                     int escolha2 = MenuOpcoes();
 
-                    if(escolha2 == 1) RegistrarChamado();
-                    if(escolha2 == 2) EscreverChamado();
-                    if(escolha2 == 4) ExcluirChamado();
-                    if(escolha2 == 3) EditarChamado();
+                    if (escolha2 == 1) RegistrarChamado();
+                    if (escolha2 == 2) EscreverChamado();
+                    if (escolha2 == 4) ExcluirChamado();
+                    if (escolha2 == 3) EditarChamado();
                     if (escolha2 == 0) escolha = MenuInicial();
                 }
                 if(escolha == 0) break;
